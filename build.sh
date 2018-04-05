@@ -3,14 +3,14 @@
 set -e
 set -x
 
-VERSION=2.0
+VERSION=2.6
 
 # based on: https://gist.github.com/pistol/5069697
 
 # ncurses
-wget http://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.9.tar.gz
-tar xvzf ncurses-5.9.tar.gz
-cd ncurses-5.9
+wget http://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.1.tar.gz
+tar xvzf ncurses-6.1.tar.gz
+cd ncurses-6.1
 ./configure --prefix=$HOME/local
 make -j8
 make install
@@ -19,7 +19,7 @@ cd ..
 # libevent
 git clone git://github.com/libevent/libevent.git
 cd libevent
-git checkout release-2.0.21-stable
+git checkout release-2.1.8-stable
 ./autogen.sh
 ./configure --prefix=$HOME/local
 make -j8
