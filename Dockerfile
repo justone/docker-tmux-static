@@ -1,4 +1,4 @@
-from debian:squeeze
+from debian:stretch
 
 maintainer Nate Jones <nate@endot.org>
 
